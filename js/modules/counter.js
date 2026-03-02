@@ -79,3 +79,22 @@ export class Counter {
         this.display.textContent = `Count: ${this.count}`;
     }
 }
+
+export class StepCounter extends Counter {
+    constructor(selector, intialValue = 0, step = 1) {
+        super(selector, intialValue);
+        this.step = step;
+    }
+
+    increment() {
+        this.count = this.count + this.step;
+        this.update();
+        this.toggleInactive();
+    }
+
+    decrement() {
+        this.count = this.count - this.step;
+        this.update();
+        this.toggleInactive();
+    }
+}
