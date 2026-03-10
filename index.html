@@ -64,68 +64,106 @@
     </header>
     <main id="main" class="main">
         <section id="overviewSection">
-            <h2>What the Counter class does</h2>
-            <ul>
-                <li>Creates a counter interface inside a container (selector)</li>
-                <li>Displays the current count</li>
-                <li>Adds Increment, Decrement, and Reset buttons</li>
-                <li>Updates the count when buttons are clicked</li>
-                <li>Disables Decrement and Reset when the count is 0</li>
-                <li>Keeps the UI updated with the current value</li>
-            </ul>
-            <h2>What problem it solves</h2>
-            <p>It encapsulates all the logic for a counter in one class, so you don’t have to repeatedly write DOM creation, event listeners, and state logic every time you want a counter.</p>
-            <p>Because of this, other classes (like StepCounter) can extend it and reuse the same functionality while only modifying the parts they need (e.g., changing how increment/decrement works).</p>
+            <div class="one-item md-one-item lg-one-item">
+                <div>
+                    <h2>What the Counter class does</h2>
+                </div>
+                <div>
+                    <ul>
+                        <li>Creates a counter interface inside a container (selector)</li>
+                        <li>Displays the current count</li>
+                        <li>Adds Increment, Decrement, and Reset buttons</li>
+                        <li>Updates the count when buttons are clicked</li>
+                        <li>Disables Decrement and Reset when the count is 0</li>
+                        <li>Keeps the UI updated with the current value</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="one-item md-one-item lg-one-item">
+                <div>
+                    <h2>What problem it solves</h2>
+                </div>
+                <div>
+                    <p>It encapsulates all the logic for a counter in one class, so you don’t have to repeatedly write DOM creation, event listeners, and state logic every time you want a counter.</p>
+                </div>
+                <div>
+                    <p>Because of this, other classes (like StepCounter) can extend it and reuse the same functionality while only modifying the parts they need (e.g., changing how increment/decrement works).</p>
+                </div>
+            </div>
         </section>
         <section id="howToSection">
-            <h2>Example HTML container markup</h2>
-            <p>Create a container element in your HTML where the counter will be rendered. The class will dynamically insert the display and buttons inside this container.</p>
-            <div>
-                <pre><code>
-                    &lt;div id="counter-container1"&gt;&lt;/div&gt;
-                    &lt;div id="counter-container2"&gt;&lt;/div&gt;
-                    &lt;div id="counter-container3"&gt;&lt;/div&gt;
-                    &lt;div id="counter-container4"&gt;&lt;/div&gt;
-                </code></pre>
+            <div class="one-item md-one-item lg-one-item">
+                <div>
+                    <h2>Example HTML container markup</h2>
+                </div>
+                <div>
+                    <p>Create a container element in your HTML where the counter will be rendered. The class will dynamically insert the display and buttons inside this container.</p>
+                </div>
+                <div>
+                    <pre><code>
+                        &lt;div id="counter-container1"&gt;&lt;/div&gt;
+                        &lt;div id="counter-container2"&gt;&lt;/div&gt;
+                        &lt;div id="counter-container3"&gt;&lt;/div&gt;
+                        &lt;div id="counter-container4"&gt;&lt;/div&gt;
+                    </code></pre>
+                </div>
+                <ul>
+                    <li>Each container must have a unique selector (usually an id).</li>
+                    <li>The Counter class uses document.querySelector() to locate the container.</li>
+                    <li>The counter display and buttons are automatically generated and appended inside the container.</li>
+                </ul>
             </div>
-            <ul>
-                <li>Each container must have a unique selector (usually an id).</li>
-                <li>The Counter class uses document.querySelector() to locate the container.</li>
-                <li>The counter display and buttons are automatically generated and appended inside the container.</li>
-            </ul>
-            <h2>Example instantiation code</h2>
-            <p>Import the counter classes and create new instances.</p>
-            <div>
-                <pre><code>
-                    const counter1 = new Counter("#counter-container1", 10);
-                    const counter2 = new Counter("#counter-container2");
-                    const counter3 = new Counter("#counter-container3");
-                    const counter4 = new StepCounter("#counter-container4", 10, 5);
-                </code></pre>
+            <div class="one-item md-one-item lg-one-item">
+                <div>
+                    <h2>Example instantiation code</h2>
+                </div>
+                <div>
+                    <p>Import the counter classes and create new instances.</p>
+                </div>
+                <div>
+                    <pre><code>
+                        const counter1 = new Counter("#counter-container1", 10);
+                        const counter2 = new Counter("#counter-container2");
+                        const counter3 = new Counter("#counter-container3");
+                        const counter4 = new StepCounter("#counter-container4", 10, 5);
+                    </code></pre>
+                </div>
+                <ul>
+                    <li>Each new Counter() creates a separate counter widget.</li>
+                    <li>The counter automatically mounts itself into the container specified by the selector.</li>
+                    <li>StepCounter extends Counter and allows custom step values.</li>
+                </ul>
             </div>
-            <ul>
-                <li>Each new Counter() creates a separate counter widget.</li>
-                <li>The counter automatically mounts itself into the container specified by the selector.</li>
-                <li>StepCounter extends Counter and allows custom step values.</li>
-            </ul>
-            <h2>Explanation of parameters</h2>
-            <h3>Counter Class</h3>
-            <pre><code>
-                new Counter(selector, initialValue)
-            </code></pre>
-            <ul>
-                <li>selector - CSS selector of the container where the counter will appear</li>
-                <li>initialValue - Starting value of the counter (default is 0)</li>
-            </ul>
-            <h3>Step Counter Class</h3>
-            <pre><code>
-                new StepCounter(selector, initialValue, step)
-            </code></pre>
-            <ul>
-                <li>selector - CSS selector of the container where the counter will appear</li>
-                <li>initialValue - Starting value of the counter (default is 0)</li>
-                <li>step - Amount added or subtracted when incrementing or decrementing</li>
-            </ul>
+            <div class="one-item md-one-item lg-one-item">
+                <div>
+                    <h2>Explanation of parameters</h2>
+                </div>
+                <div>
+                    <h3>Counter Class</h3>
+                </div>
+                <div>
+                    <pre><code>
+                        new Counter(selector, initialValue)
+                    </code></pre>
+                </div>
+                <ul>
+                    <li>selector - CSS selector of the container where the counter will appear</li>
+                    <li>initialValue - Starting value of the counter (default is 0)</li>
+                </ul>
+                <div>
+                    <h3>Step Counter Class</h3>
+                </div>
+                <div>
+                    <pre><code>
+                        new StepCounter(selector, initialValue, step)
+                    </code></pre>
+                </div>
+                <ul>
+                    <li>selector - CSS selector of the container where the counter will appear</li>
+                    <li>initialValue - Starting value of the counter (default is 0)</li>
+                    <li>step - Amount added or subtracted when incrementing or decrementing</li>
+                </ul>
+            </div>
         </section>
         <section id="liveDemoSection">
             <div class="one-item sm-one-item md-two-items lg-two-items">
