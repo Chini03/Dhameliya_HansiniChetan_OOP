@@ -1,8 +1,8 @@
 .foot {
-    background-color: var(--color-white);
+    background-color: var(--color-primary);
     padding: 0 1em;
     margin-top: 4em;
-    border-top: .1em solid var(--color-primary2);
+    
 
     .footerWrapper {
         width: 100%;
@@ -15,7 +15,7 @@
     }
 
     a {
-        color: var(--color-black);
+        color: var(--color-secondary);
         i:hover {
             text-decoration: underline;
         }
