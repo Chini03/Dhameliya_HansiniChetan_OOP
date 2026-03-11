@@ -1,7 +1,9 @@
 .counter {
+    background-color: var(--color-primary);
+    color: var(--color-secondary);
     border: solid 1px #c5c5c5;
-    margin-top: 40px;
     padding: 20px;
+    margin-bottom: 1em;
     box-shadow: 0 0 5px rgba(0,0,0,.2);
     font-family: 'Open Sans', Arial, Helvetica, sans-serif;
   }
@@ -12,11 +14,11 @@
     margin-right: 20px;
     border: none;
     padding: 10px;
-    background-color: cadetblue;
-    color: #fff;
+    background-color: var(--color-secondary);
+    color: var(--color-primary);
     letter-spacing: 1px;
   }
 
   .inactive {
-    background-color: rgb(151, 161, 161);
+    background-color: var(--color-secondary-2);
   }

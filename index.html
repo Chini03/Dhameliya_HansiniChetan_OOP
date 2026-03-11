@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Harlowe D's Portfolio</title>
-    <link rel="icon" href="/images/stamp.svg">
+    <title>Counter Site</title>
     <script src="https://kit.fontawesome.com/bb4be9e166.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,9 +17,9 @@
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.0/ScrollTrigger.js"></script>
     <script type="module" defer src="js/home.js"></script>
 </head>
-<body class="site">
+<body class="site" id="body">
     <a href="#main" class="skip-link screen-reader-text">Skip to main content</a>
-    <h1 class="visually-hidden">Welcome to my Portfolio!</h1>
+    <h1 class="visually-hidden">Welcome to the counter site!</h1>
     <header class="head">
         <h2 class="visually-hidden">Website Header</h2>
 
@@ -28,7 +27,7 @@
 
             <div>
                 <a href="index.html" class="logo logoWrapper">
-                    <img src="images/Horizontal_Logo.svg" alt="Harlowe's Brand Logo" class="navLogo">
+                    Conter Widget Factory
                 </a>
             </div>
 
@@ -37,12 +36,9 @@
                 <nav id="desktopMenu">
                     <h3 class="visually-hidden">Main Navigation</h3>
                     <ul>
-                        <li><a href="index.php" aria-label="Go to Case Studies">Home</a></li>
-                        <li><a href="#caseStudiesSection" aria-label="Go to Case Studies">Case Studies</a></li>
-                        <li><a href="#projectsSection" aria-label="Go to Projects">Projects</a></li>
-                        <li><a href="#technologiesSection" aria-label="Go to Technologies">Technologies</a></li>
-                        <li><a href="about.html" aria-label="Go to About">About</a></li>
-                        <li><a href="#contactSection" aria-label="Go to Contact Me">Contact</a></li>
+                        <li><a href="#overviewSection" aria-label="Go to Overview">Overview</a></li>
+                        <li><a href="#howToSection" aria-label="Go to How To">How To</a></li>
+                        <li><a href="#liveDemoSection" aria-label="Go to Live Demo">Live Demo</a></li>
                     </ul>
                 </nav>
 
@@ -54,46 +50,183 @@
                 <nav id="mobileMenu">
                     <h3 class="visually-hidden">Mobile Main Navigation</h3>
                     <div class="alignItemRow">
-                        <img src="images/Horizontal_Logo.svg" alt="Harlowe's Brand Logo" class="navLogo">
+                        <a href="index.html" class="logo logoWrapper">
+                            Conter Widget Factory
+                        </a>
                         <button id="mobileMenuCloseBtn" aria-label="Close Mobile Menu Button">&times;</button>
                     </div>
                     <ul>
-                        <li><a href="index.php" aria-label="Go to Case Studies">Home</a></li>
-                        <li><a href="#caseStudiesSection" aria-label="Go to Case Studies">Case Studies</a></li>
-                        <li><a href="#projectsSection" aria-label="Go to Projects">Projects</a></li>
-                        <li><a href="#technologiesSection" aria-label="Go to Technologies">Technologies</a></li>
-                        <li><a href="about.html" aria-label="Go to About">About</a></li>
-                        <li><a href="#contactSection" aria-label="Go to Contact Me">Contact</a></li>
+                        <li><a href="#overviewSection" aria-label="Go to Overview">Overview</a></li>
+                        <li><a href="#howToSection" aria-label="Go to How To">How To</a></li>
+                        <li><a href="#liveDemoSection" aria-label="Go to Live Demo">Live Demo</a></li>
                     </ul>
                 </nav>
            </div>
         </div>
     </header>
     <main id="main" class="main">
-        <div class="one-item sm-one-item md-two-items lg-two-items">
-            <div id="counter-container1" class="counter col-span-full m-col-span-6"></div>
-            <div id="counter-container2" class="counter col-span-full m-col-span-6"></div>
-            <div id="counter-container3" class="counter col-span-full m-col-span-6"></div>
-            <div id="counter-container4" class="counter col-span-full m-col-span-6"></div>
-        </div>
+        <section id="overviewSection">
+            <div class="one-item md-one-item lg-one-item">
+                <div>
+                    <h2>What the Counter class does</h2>
+                </div>
+                <div>
+                    <ul>
+                        <li class="showBullet">Creates a counter interface inside a container (selector)</li>
+                        <li class="showBullet">Displays the current count</li>
+                        <li class="showBullet">Adds Increment, Decrement, and Reset buttons</li>
+                        <li class="showBullet">Updates the count when buttons are clicked</li>
+                        <li class="showBullet">Disables Decrement and Reset when the count is 0</li>
+                        <li class="showBullet">Keeps the UI updated with the current value</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="one-item md-one-item lg-one-item">
+                <div>
+                    <h2>What problem it solves</h2>
+                </div>
+                <div>
+                    <p>It encapsulates all the logic for a counter in one class, so you don’t have to repeatedly write DOM creation, event listeners, and state logic every time you want a counter.</p>
+                </div>
+                <div>
+                    <p>Because of this, other classes (like StepCounter) can extend it and reuse the same functionality while only modifying the parts they need (e.g., changing how increment/decrement works).</p>
+                </div>
+            </div>
+        </section>
+        <section id="howToSection">
+            <div class="one-item md-one-item lg-one-item">
+                <div>
+                    <h2>Example HTML container markup</h2>
+                </div>
+                <div>
+                    <p>Create a container element in your HTML where the counter will be rendered. The class will dynamically insert the display and buttons inside this container.</p>
+                </div>
+                <div class="code">
+                    <code>
+                        &lt;div id="counter-container1"&gt;&lt;/div&gt;<br>
+                        &lt;div id="counter-container2"&gt;&lt;/div&gt;<br>
+                        &lt;div id="counter-container3"&gt;&lt;/div&gt;<br>
+                        &lt;div id="counter-container4"&gt;&lt;/div&gt;<br>
+                    </code>
+                </div>
+                <ul>
+                    <li class="showBullet">Each container must have a unique selector (usually an id).</li>
+                    <li class="showBullet">The Counter class uses document.querySelector() to locate the container.</li>
+                    <li class="showBullet">The counter display and buttons are automatically generated and appended inside the container.</li>
+                </ul>
+            </div>
+            <div class="one-item md-one-item lg-one-item">
+                <div>
+                    <h2>Example instantiation code</h2>
+                </div>
+                <div>
+                    <p>Import the counter classes and create new instances.</p>
+                </div>
+                <div class="code">
+                    <code>
+                        const counter1 = new Counter("#counter-container1", 10);<br>
+                        const counter2 = new Counter("#counter-container2");<br>
+                        const counter3 = new Counter("#counter-container3");<br>
+                        const counter4 = new StepCounter("#counter-container4", 10, 5);<br>
+                    </code>
+                </div>
+                <ul>
+                    <li class="showBullet">Each new Counter() creates a separate counter widget.</li>
+                    <li class="showBullet">The counter automatically mounts itself into the container specified by the selector.</li>
+                    <li class="showBullet">StepCounter extends Counter and allows custom step values.</li>
+                </ul>
+            </div>
+            <div class="one-item md-one-item lg-one-item">
+                <div>
+                    <h2>Explanation of parameters</h2>
+                </div>
+                <div>
+                    <h3>Counter Class</h3>
+                </div>
+                <div class="code">
+                    <code>
+                        new Counter(selector, initialValue)
+                    </code>
+                </div>
+                <ul>
+                    <li class="showBullet">selector - CSS selector of the container where the counter will appear</li>
+                    <li class="showBullet">initialValue - Starting value of the counter (default is 0)</li>
+                </ul>
+                <div>
+                    <h3>Step Counter Class</h3>
+                </div>
+                <div class="code">
+                    <code>
+                        new StepCounter(selector, initialValue, step)
+                    </code>
+                </div>
+                <ul>
+                    <li class="showBullet">selector - CSS selector of the container where the counter will appear</li>
+                    <li class="showBullet">initialValue - Starting value of the counter (default is 0)</li>
+                    <li class="showBullet">step - Amount added or subtracted when incrementing or decrementing</li>
+                </ul>
+            </div>
+        </section>
+        <section id="liveDemoSection">
+            <div class="one-item md-one-item lg-one-item">
+                <div>
+                    <h2>Demos</h2>
+                </div>
+                <div>
+                    <div class="one-item sm-one-item md-two-items lg-two-items">
+                        <div id="counter-container1" class="counter"></div>
+                        <div id="counter-container2" class="counter"></div>
+                        <div id="counter-container3" class="counter"></div>
+                        <div id="counter-container4" class="counter"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
     </main>
     <footer class="foot">
         <h2 class="visually-hidden">Website Footer</h2>
-        <div class="one-item sm-one-item md-one-item lg-three-items footerWrapper">
+        <div class=" one-item md-one-item lg-one-item desktopFooter">
+            <div class="desktopFooterWrapper">
+                <div>
+                    <a href="index.html" class="logo logoWrapper">
+                        Conter Widget Factory
+                    </a>
+                </div>
+                <nav class="footerNav">
+                    <h3 class="visually-hidden">Footer Navigation</h3>
+                    <ul class="one-item sm-one-item md-one-item lg-three-items">
+                        <li><a href="#overviewSection" aria-label="Go to Overview">Overview</a></li>
+                        <li><a href="#howToSection" aria-label="Go to How To">How To</a></li>
+                        <li><a href="#liveDemoSection" aria-label="Go to Live Demo">Live Demo</a></li>
+                    </ul>
+                </nav>
+                <div class="footerSocials">
+                    <ul>
+                        <li><a href="https://www.instagram.com/chini_03_" target="_blank"
+                                aria-label="Harlowe on Instagram"><i class="fa-brands fa-instagram"
+                                    aria-hidden="true"></i></a>
+                        </li>
+                        <li><a href="https://www.linkedin.com/in/harlowe-hansini-d-dhameliya-a01282265_" target="_blank"
+                                aria-label="Harlowe on LinkedIn"><i class="fa-brands fa-linkedin"
+                                    aria-hidden="true"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="one-item sm-one-item md-one-item lg-three-items mobileFooter footerWrapper">
             <div>
                 <a href="index.html" class="logo logoWrapper">
-                    <img src="images/Horizontal_Logo.svg" alt="Harlowe's Brand Logo" class="footNavLogo">
+                    Conter Widget Factory
                 </a>
             </div>
             <nav class="footerNav">
                 <h3 class="visually-hidden">Footer Navigation</h3>
-                <ul class="one-item sm-one-item md-one-item lg-six-items">
-                    <li><a href="index.php" aria-label="Go to Case Studies">Home</a></li>
-                    <li><a href="#caseStudiesSection" aria-label="Go to Case Studies">Case Studies</a></li>
-                        <li><a href="#projectsSection" aria-label="Go to Projects">Projects</a></li>
-                        <li><a href="#technologiesSection" aria-label="Go to Technologies">Technologies</a></li>
-                        <li><a href="about.html" aria-label="Go to About">About</a></li>
-                        <li><a href="#contactSection" aria-label="Go to Contact Me">Contact</a></li>
+                <ul class="one-item sm-one-item md-one-item lg-three-items">
+                    <li><a href="#overviewSection" aria-label="Go to Overview">Overview</a></li>
+                    <li><a href="#howToSection" aria-label="Go to How To">How To</a></li>
+                    <li><a href="#liveDemoSection" aria-label="Go to Live Demo">Live Demo</a></li>
                 </ul>
             </nav>
             <div class="footerSocials">
