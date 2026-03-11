@@ -72,12 +72,12 @@
                 </div>
                 <div>
                     <ul>
-                        <li>Creates a counter interface inside a container (selector)</li>
-                        <li>Displays the current count</li>
-                        <li>Adds Increment, Decrement, and Reset buttons</li>
-                        <li>Updates the count when buttons are clicked</li>
-                        <li>Disables Decrement and Reset when the count is 0</li>
-                        <li>Keeps the UI updated with the current value</li>
+                        <li class="showBullet">Creates a counter interface inside a container (selector)</li>
+                        <li class="showBullet">Displays the current count</li>
+                        <li class="showBullet">Adds Increment, Decrement, and Reset buttons</li>
+                        <li class="showBullet">Updates the count when buttons are clicked</li>
+                        <li class="showBullet">Disables Decrement and Reset when the count is 0</li>
+                        <li class="showBullet">Keeps the UI updated with the current value</li>
                     </ul>
                 </div>
             </div>
@@ -101,7 +101,7 @@
                 <div>
                     <p>Create a container element in your HTML where the counter will be rendered. The class will dynamically insert the display and buttons inside this container.</p>
                 </div>
-                <div>
+                <div class="code">
                     <code>
                         &lt;div id="counter-container1"&gt;&lt;/div&gt;<br>
                         &lt;div id="counter-container2"&gt;&lt;/div&gt;<br>
@@ -110,9 +110,9 @@
                     </code>
                 </div>
                 <ul>
-                    <li>Each container must have a unique selector (usually an id).</li>
-                    <li>The Counter class uses document.querySelector() to locate the container.</li>
-                    <li>The counter display and buttons are automatically generated and appended inside the container.</li>
+                    <li class="showBullet">Each container must have a unique selector (usually an id).</li>
+                    <li class="showBullet">The Counter class uses document.querySelector() to locate the container.</li>
+                    <li class="showBullet">The counter display and buttons are automatically generated and appended inside the container.</li>
                 </ul>
             </div>
             <div class="one-item md-one-item lg-one-item">
@@ -122,7 +122,7 @@
                 <div>
                     <p>Import the counter classes and create new instances.</p>
                 </div>
-                <div>
+                <div class="code">
                     <code>
                         const counter1 = new Counter("#counter-container1", 10);<br>
                         const counter2 = new Counter("#counter-container2");<br>
@@ -131,9 +131,9 @@
                     </code>
                 </div>
                 <ul>
-                    <li>Each new Counter() creates a separate counter widget.</li>
-                    <li>The counter automatically mounts itself into the container specified by the selector.</li>
-                    <li>StepCounter extends Counter and allows custom step values.</li>
+                    <li class="showBullet">Each new Counter() creates a separate counter widget.</li>
+                    <li class="showBullet">The counter automatically mounts itself into the container specified by the selector.</li>
+                    <li class="showBullet">StepCounter extends Counter and allows custom step values.</li>
                 </ul>
             </div>
             <div class="one-item md-one-item lg-one-item">
@@ -143,43 +143,79 @@
                 <div>
                     <h3>Counter Class</h3>
                 </div>
-                <div>
+                <div class="code">
                     <code>
                         new Counter(selector, initialValue)
                     </code>
                 </div>
                 <ul>
-                    <li>selector - CSS selector of the container where the counter will appear</li>
-                    <li>initialValue - Starting value of the counter (default is 0)</li>
+                    <li class="showBullet">selector - CSS selector of the container where the counter will appear</li>
+                    <li class="showBullet">initialValue - Starting value of the counter (default is 0)</li>
                 </ul>
                 <div>
                     <h3>Step Counter Class</h3>
                 </div>
-                <div>
+                <div class="code">
                     <code>
                         new StepCounter(selector, initialValue, step)
                     </code>
                 </div>
                 <ul>
-                    <li>selector - CSS selector of the container where the counter will appear</li>
-                    <li>initialValue - Starting value of the counter (default is 0)</li>
-                    <li>step - Amount added or subtracted when incrementing or decrementing</li>
+                    <li class="showBullet">selector - CSS selector of the container where the counter will appear</li>
+                    <li class="showBullet">initialValue - Starting value of the counter (default is 0)</li>
+                    <li class="showBullet">step - Amount added or subtracted when incrementing or decrementing</li>
                 </ul>
             </div>
         </section>
         <section id="liveDemoSection">
-            <div class="one-item sm-one-item md-two-items lg-two-items">
-                <div id="counter-container1" class="counter"></div>
-                <div id="counter-container2" class="counter"></div>
-                <div id="counter-container3" class="counter"></div>
-                <div id="counter-container4" class="counter"></div>
+            <div class="one-item md-one-item lg-one-item">
+                <div>
+                    <h2>Demos</h2>
+                </div>
+                <div>
+                    <div class="one-item sm-one-item md-two-items lg-two-items">
+                        <div id="counter-container1" class="counter"></div>
+                        <div id="counter-container2" class="counter"></div>
+                        <div id="counter-container3" class="counter"></div>
+                        <div id="counter-container4" class="counter"></div>
+                    </div>
+                </div>
             </div>
         </section>
         
     </main>
     <footer class="foot">
         <h2 class="visually-hidden">Website Footer</h2>
-        <div class="one-item sm-one-item md-one-item lg-three-items footerWrapper">
+        <div class=" one-item md-one-item lg-one-item desktopFooter">
+            <div class="desktopFooterWrapper">
+                <div>
+                    <a href="index.html" class="logo logoWrapper">
+                        Conter Widget Factory
+                    </a>
+                </div>
+                <nav class="footerNav">
+                    <h3 class="visually-hidden">Footer Navigation</h3>
+                    <ul class="one-item sm-one-item md-one-item lg-three-items">
+                        <li><a href="#overviewSection" aria-label="Go to Overview">Overview</a></li>
+                        <li><a href="#howToSection" aria-label="Go to How To">How To</a></li>
+                        <li><a href="#liveDemoSection" aria-label="Go to Live Demo">Live Demo</a></li>
+                    </ul>
+                </nav>
+                <div class="footerSocials">
+                    <ul>
+                        <li><a href="https://www.instagram.com/chini_03_" target="_blank"
+                                aria-label="Harlowe on Instagram"><i class="fa-brands fa-instagram"
+                                    aria-hidden="true"></i></a>
+                        </li>
+                        <li><a href="https://www.linkedin.com/in/harlowe-hansini-d-dhameliya-a01282265_" target="_blank"
+                                aria-label="Harlowe on LinkedIn"><i class="fa-brands fa-linkedin"
+                                    aria-hidden="true"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="one-item sm-one-item md-one-item lg-three-items mobileFooter footerWrapper">
             <div>
                 <a href="index.html" class="logo logoWrapper">
                     Conter Widget Factory

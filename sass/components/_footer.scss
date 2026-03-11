@@ -26,8 +26,15 @@
 
 
     .footerNav {
+        
         li {
-            margin-bottom: 2.5em;
+            margin: 2.5em 0;
+        }
+
+        @media screen and (min-width: 75em) {
+           li {
+            margin: 0em 1.5em;
+        } 
         }
     }
 
@@ -44,14 +51,19 @@
         
     }
     .footerCopy {
-        border-top: .125em solid var(--color-gray50);
+        border-top: .125em solid var(--color-secondary);
         margin-top: 2em;
         text-align: center;
         p {
+            color: var(--color-secondary);
             margin: 2em 0;
             text-align: center;
         }
     }
+}
+
+.desktopFooter {
+    display: none;
 }
 
 @media screen and (min-width: 75em) {
@@ -59,5 +71,20 @@
         ul {
             justify-content: flex-end;
         }
+    }
+
+    .desktopFooter {
+        display: block;
+        margin-top: 3em;
+    }
+
+    .desktopFooterWrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .mobileFooter{
+        display: none;
     }
 }
